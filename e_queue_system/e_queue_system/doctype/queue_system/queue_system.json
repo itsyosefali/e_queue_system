@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{YYYY}-{MM}-{DD}-{####}",
+ "creation": "2023-11-15 20:03:47.547676",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "related_business",
+  "receipt_signature",
+  "column_break_stvgi",
+  "customer",
+  "customer_name",
+  "customer_email",
+  "customer_address_details",
+  "device_code",
+  "device_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "related_business",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Related Business",
+   "options": "Related Business",
+   "reqd": 1
+  },
+  {
+   "fieldname": "receipt_signature",
+   "fieldtype": "Signature",
+   "in_list_view": 1,
+   "label": "Receipt Signature",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_stvgi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.custom_customer_full_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_email",
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.custom_customer_address_details",
+   "fieldname": "customer_address_details",
+   "fieldtype": "Data",
+   "label": "Customer Address Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "device_code",
+   "fieldtype": "Link",
+   "label": "Device Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "device_code.item_name",
+   "fieldname": "device_name",
+   "fieldtype": "Data",
+   "label": "Device Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-16 01:15:40.323145",
+ "modified_by": "Administrator",
+ "module": "E Queue System",
+ "name": "Queue System",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
