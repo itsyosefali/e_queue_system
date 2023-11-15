@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include e_queue_system *.css
+recursive-include e_queue_system *.csv
+recursive-include e_queue_system *.html
+recursive-include e_queue_system *.ico
+recursive-include e_queue_system *.js
+recursive-include e_queue_system *.json
+recursive-include e_queue_system *.md
+recursive-include e_queue_system *.png
+recursive-include e_queue_system *.py
+recursive-include e_queue_system *.svg
+recursive-include e_queue_system *.txt
+recursive-exclude e_queue_system *.pyc
