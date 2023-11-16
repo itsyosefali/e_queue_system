@@ -5,4 +5,7 @@
 from frappe.model.document import Document
 
 class QueueSystem(Document):
-	pass
+	def validate(self):
+		# set full name for contact
+		if self.first_name and self.last_name:
+			self.full_name = self.first_name + " " + self.last_name

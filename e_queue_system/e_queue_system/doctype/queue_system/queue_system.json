@@ -8,82 +8,73 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "related_business",
-  "receipt_signature",
-  "column_break_stvgi",
-  "customer",
-  "customer_name",
-  "customer_email",
-  "customer_address_details",
-  "device_code",
-  "device_name"
+  "first_name",
+  "last_name",
+  "full_name",
+  "contact_number",
+  "personal_email",
+  "column_break_tw8wr",
+  "territory",
+  "address",
+  "section_break_ii7rx",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "related_business",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Related Business",
-   "options": "Related Business",
-   "reqd": 1
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
   },
   {
-   "fieldname": "receipt_signature",
-   "fieldtype": "Signature",
-   "in_list_view": 1,
-   "label": "Receipt Signature",
-   "reqd": 1
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
   },
   {
-   "fieldname": "column_break_stvgi",
+   "fieldname": "column_break_tw8wr",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "customer",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "personal_email",
+   "fieldtype": "Data",
+   "label": "Personal Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "section_break_ii7rx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nPass\nTransfer"
+  },
+  {
+   "fieldname": "territory",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Customer",
-   "options": "Customer",
-   "reqd": 1
+   "label": "Territory",
+   "options": "Territory"
   },
   {
-   "fetch_from": "customer.custom_customer_full_name",
-   "fieldname": "customer_name",
+   "fieldname": "full_name",
    "fieldtype": "Data",
-   "label": "Customer Name",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "customer.customer_email",
-   "fieldname": "customer_email",
-   "fieldtype": "Data",
-   "label": "Customer Email",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "customer.custom_customer_address_details",
-   "fieldname": "customer_address_details",
-   "fieldtype": "Data",
-   "label": "Customer Address Details",
-   "read_only": 1
-  },
-  {
-   "fieldname": "device_code",
-   "fieldtype": "Link",
-   "label": "Device Code",
-   "options": "Item"
-  },
-  {
-   "fetch_from": "device_code.item_name",
-   "fieldname": "device_name",
-   "fieldtype": "Data",
-   "label": "Device Name",
-   "read_only": 1
+   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 01:15:40.323145",
+ "modified": "2023-11-16 13:35:38.544831",
  "modified_by": "Administrator",
  "module": "E Queue System",
  "name": "Queue System",
