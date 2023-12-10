@@ -1,16 +1,5 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<div class="container">
-    <div class="row">
-        <div class="col-12 text-center">
-            <h3 class="subtitle muted"></h3>
-            <h1 class="display-1">{{ last_pending_person }}</h1>
-        </div>
-
-        <p class="col-12 text-center text-muted">
-            Please Come  To The Receptionist
-        </p>
-    </div>
-</div>
+<h1 class="display-1">{{ queue_number }}</h1>
 {% endblock %}

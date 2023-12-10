@@ -23,7 +23,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-11-17 15:39:31.317041",
+ "modified": "2023-11-18 12:06:44.969684",
  "modified_by": "Administrator",
  "module": "E Queue System",
  "name": "device-maintenance-queue",
@@ -36,7 +36,7 @@
  "show_sidebar": 1,
  "success_message": "Your Queue Number Is : 2",
  "success_title": "Thank You",
- "success_url": "success",
+ "success_url": "",
  "title": "Device Maintenance Queue",
  "web_form_fields": [
   {
