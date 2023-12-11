@@ -1,21 +1,55 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
+
+
 <div class="container mt-5">
     <div class="row">
-        <div class="col-12 text-center">
-            <h3 class="subtitle text-muted">Next in line:</h3>
-            <h1 class="display-1">{{ last_pending_person }}</h1>
+
+        <!-- Card 1 -->
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="subtitle text-muted">Current:</h3>
+                    <h1 class="display-1">{{ queue_number1 }}</h1>
+                    <p>Desk: {{ desk1 }}</p>
+                </div>
+            </div>
         </div>
-        <div class="col-12 text-center">
-            <h3 class="subtitle text-muted">Desk:</h3>
-            <h1 class="display-1">{{ desk }}</h1>
-            <h3 class="subtitle text-muted">Queue Number:</h3>
-            <h1 class="display-1">{{ queue_number }}</h1>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="subtitle text-muted">Next in line:</h3>
+                    <h1 class="display-1">{{ queue_number2 }}</h1>
+                    <p>Desk: {{ desk2 }}</p>
+                </div>
+            </div>
         </div>
-        <div class="col-12 text-center mt-3">
-            <p class="text-muted">Please wait for your turn.</p>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="subtitle text-muted">Next in line:</h3>
+                    <h1 class="display-1">{{ queue_number3 }}</h1>
+                    <p>Desk: {{ desk3 }}</p>
+                </div>
+            </div>
         </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="subtitle text-muted">Next in line:</h3>
+                    <h1 class="display-1">{{ queue_number4 }}</h1>
+                    <p>Desk: {{ desk4 }}</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 {% endblock %}

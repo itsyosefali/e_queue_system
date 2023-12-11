@@ -1,5 +1,36 @@
-{% extends "templates/web.html" %}
-
 {% block page_content %}
-<h1 class="display-1">{{ queue_number }}</h1>
+<style>
+    body {
+        background-image: url('https://media.istockphoto.com/id/1125323600/photo/technician-repairing-broken-smartphone-on-desk.jpg?s=2048x2048&w=is&k=20&c=y33VTTcuX220dkIvsoPhLGI-8SeRm9uniOXDJ4JWshg=');
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .card {
+        background: white;
+        width: 80%;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        text-align: center;
+    }
+
+    /* the rest of your CSS */
+
+    @media (min-width: 768px) {
+        .card {
+            width: 40%;
+        }
+    }
+</style>
+
+<div class="card">
+    <h1 class="card-title">{{ full_name }}</h1>
+    <p class="card-text">Your Queue Number</p>
+    <h2 class="card-subtitle">{{ queue_number }}</h2>
+</div>
 {% endblock %}
