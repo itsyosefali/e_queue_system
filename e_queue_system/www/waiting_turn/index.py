@@ -6,6 +6,8 @@ def get_context(context):
 
     if not last_four_people:
         last_four_people = [{"full_name": "No one in queue", "name": "No queue number", "desk": "No desk assigned"}] * 4
+    elif len(last_four_people) < 4:
+        last_four_people += [{"full_name": "", "name": "", "desk": ""}] * (4 - len(last_four_people))
 
     context.last_person1 = last_four_people[0]['full_name']
     context.queue_number1 = last_four_people[0]['name'].split('-')[-1]  # keep only the last part
