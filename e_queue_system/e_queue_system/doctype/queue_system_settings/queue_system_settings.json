@@ -9,7 +9,9 @@
  "field_order": [
   "number_of_desks",
   "section_break_trmjj",
-  "desk_settings"
+  "desk_settings",
+  "section_break_irnmh",
+  "number_of_cards"
  ],
  "fields": [
   {
@@ -26,12 +28,22 @@
    "fieldtype": "Table",
    "label": "Desk Settings",
    "options": "Desk Receptionist"
+  },
+  {
+   "fieldname": "section_break_irnmh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "to display in waiting_turn page",
+   "fieldname": "number_of_cards",
+   "fieldtype": "Int",
+   "label": "Number of Cards"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-12-14 13:17:35.143225",
+ "modified": "2023-12-16 13:06:00.687665",
  "modified_by": "Administrator",
  "module": "E Queue System",
  "name": "Queue System Settings",

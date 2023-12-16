@@ -27,7 +27,7 @@ def get_context(context):
     context.desk4 = last_four_people[3]['desk']
 
     # Calculate num_cards based on the length of last_four_people
-    num_cards = len(last_four_people)
+    num_cards = frappe.get_single("Queue System Settings").number_of_cards
     context.num_cards = num_cards
 
 # Now you can use {{ num_cards }} in your Jinja2 template.
