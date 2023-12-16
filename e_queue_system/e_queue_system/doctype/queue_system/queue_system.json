@@ -17,8 +17,8 @@
   "address",
   "section_break_ii7rx",
   "status",
-  "desk",
-  "receptionist_name"
+  "receptionist_name",
+  "desk"
  ],
  "fields": [
   {
@@ -84,9 +84,9 @@
   },
   {
    "fieldname": "desk",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Desk",
-   "options": "Receptionist Desk"
+   "read_only": 1
   },
   {
    "fetch_from": "desk.receptionist_name",
@@ -98,7 +98,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-10 11:19:18.112936",
+ "modified": "2023-12-16 12:01:18.644483",
  "modified_by": "Administrator",
  "module": "E Queue System",
  "name": "Queue System",
@@ -115,6 +115,16 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Dept Receptionist",
    "share": 1,
    "write": 1
   }

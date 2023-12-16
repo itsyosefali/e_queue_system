@@ -1,55 +1,51 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
+<style>
+    .container {
+        margin-top: 50px;
+    }
 
+    .card {
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    h1.display-1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+</style>
 
 <div class="container mt-5">
     <div class="row">
 
-        <!-- Card 1 -->
-        <div class="col-md-3">
+        {% for i in range(num_cards) %}
+        <div class="col-md-{{ 12/num_cards }}">
             <div class="card text-center">
                 <div class="card-body">
-                    <h3 class="subtitle text-muted">Current:</h3>
-                    <h1 class="display-1">{{ queue_number1 }}</h1>
-                    <p>Desk: {{ desk1 }}</p>
+                    <h1 class="display-1">{{ last_person1 if i == 0 else last_person2 if i == 1 else last_person3 if i
+                        == 2 else
+                        last_person4 }}</h1>
+                    <h1 class="display-1">{{ queue_number1 if i == 0 else queue_number2 if i == 1 else queue_number3 if
+                        i == 2
+                        else queue_number4 }}</h1>
+                    <h1 class="display-1">{{ desk1 if i == 0 else desk2 if i == 1 else desk3 if i == 2 else desk4 }}
+                    </h1>
                 </div>
             </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-3">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h3 class="subtitle text-muted">Next in line:</h3>
-                    <h1 class="display-1">{{ queue_number2 }}</h1>
-                    <p>Desk: {{ desk2 }}</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-3">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h3 class="subtitle text-muted">Next in line:</h3>
-                    <h1 class="display-1">{{ queue_number3 }}</h1>
-                    <p>Desk: {{ desk3 }}</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-md-3">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h3 class="subtitle text-muted">Next in line:</h3>
-                    <h1 class="display-1">{{ queue_number4 }}</h1>
-                    <p>Desk: {{ desk4 }}</p>
-                </div>
-            </div>
-        </div>
-
+        {% endfor %}
     </div>
 </div>
+
 {% endblock %}

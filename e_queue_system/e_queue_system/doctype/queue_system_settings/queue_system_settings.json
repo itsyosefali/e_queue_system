@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-14 12:53:51.019207",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "number_of_desks",
+  "section_break_trmjj",
+  "desk_settings"
+ ],
+ "fields": [
+  {
+   "fieldname": "number_of_desks",
+   "fieldtype": "Int",
+   "label": "Number of Desks"
+  },
+  {
+   "fieldname": "section_break_trmjj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "desk_settings",
+   "fieldtype": "Table",
+   "label": "Desk Settings",
+   "options": "Desk Receptionist"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-12-14 13:17:35.143225",
+ "modified_by": "Administrator",
+ "module": "E Queue System",
+ "name": "Queue System Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
