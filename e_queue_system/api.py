@@ -1,5 +1,3 @@
-from nis import cat
-
 import frappe
 @frappe.whitelist()
 def get_assigned_to_me(user):
