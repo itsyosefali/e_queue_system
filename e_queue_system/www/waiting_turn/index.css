@@ -1,45 +1,37 @@
-<style>
-    .container {
-        margin-top: 50px;
-    }
+// Import Tailwind CSS styles
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-.card {
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    background: #f8f9fa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
+// Custom styles
+.container {
+    margin-top: 50px;
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.transition-transform {
+    transition: transform 0.3s ease-in-out;
 }
 
-.card-body {
-    padding: 20px;
-    border-radius: 15px;
-    color: #212529;
-    font-size: 1.25rem;
-    line-height: 1.5;
+.hover\:scale-105:hover {
+    transform: scale(1.05);
 }
 
-h1.display-1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #212529;
+.bg-gray-100 {
+    background-color: #f8f9fa;
 }
-    .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
 
-  .col-md-4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-</style>
+.rounded-lg {
+    border-radius: 0.375rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-gray-800 {
+    color: #343a40;
+}
+
+.text-gray-600 {
+    color: #6c757d;
+}

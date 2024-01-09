@@ -2,20 +2,27 @@
 
 {% block page_content %}
 
-<div class="container mt-5">
-    <div class="row">
+<div class="container mx-auto my-8">
+    <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold mb-8 text-center text-gray-800">Waiting List</h1>
 
-        {% for person in last_four_people[:num_cards] %}
-        <div class="col-md-4"> <!-- Use col-md-4 to have 3 cards in a row on medium-sized screens -->
-            <div class="card text-center">
-                <div class="card-body">
-                    <h1 class="display-1">{{ person.full_name }}</h1>
-                    <h1 class="display-1">{{ person.name[-1:].split('-')[-1] }}</h1>
-                    <h1 class="display-1">{{ person.desk }}</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for desk_data in queue_data %}
+            <div>
+                <h2 class="text-xl font-semibold text-gray-700 mb-4">{{ desk_data.desk_name }}</h2>
+
+                {% for person in desk_data.queue %}
+                <div class="transition-transform transform hover:scale-105 mb-4">
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <h3 class="text-lg font-medium text-gray-800">{{ person.full_name }}</h3>
+                        <p class="text-sm text-gray-600">Queue: {{ person.name[-1:].split('-')[-1] }} - Desk: {{
+                            person.desk }}</p>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
 
